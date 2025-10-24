@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "198112268127",
+    "project_id": "nova-shop-c6622",
+    "storage_bucket": "nova-shop-c6622.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198112268127:android:0ff14c8d1fc9c4eca9b0ea",
+        "android_client_info": {
+          "package_name": "com.example.nova_shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa5Q9lH4jRGoqg1WdenEAkbnu8nkmpjLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
