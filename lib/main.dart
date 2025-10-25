@@ -14,49 +14,40 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   Bloc.observer = MyBlocObserver();
-  runApp(const MyApp());
+  runApp(
+    BlocProvider<AuthCubit>(
+      create: (context) => AuthCubit(),
+      child: const MyApp(),
+    ),
+  );
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   isLoggedIn();
-  // }
 
   @override
   Widget build(BuildContext context) {
     var nextScreen = BlocProvider.of<AuthCubit>(context).isLoggedIn();
-    return BlocProvider<AuthCubit>(
-      create: (context) => AuthCubit(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Nova Shop',
-        routes: {
-          NovaRoutes.main: (context) => MyApp(),
-          NovaRoutes.home: (context) => HomeScreen(),
-          NovaRoutes.login: (context) => LoginScreen(),
-          NovaRoutes.signup: (context) => SignupScreen(),
-        },
-        home: AnimatedSplashScreen(
-          splash: 'assets/images/logo.png',
-          splashIconSize: 350,
-          nextScreen: nextScreen ? HomeScreen() : LoginScreen(),
-          animationDuration: Duration(milliseconds: 700),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Nova Shop',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.grey)),
+        iconTheme: const IconThemeData(color: Colors.grey, size: 24),
+      ),
+      routes: {
+        NovaRoutes.main: (context) => MyApp(),
+        NovaRoutes.home: (context) => HomeScreen(),
+        NovaRoutes.login: (context) => LoginScreen(),
+        NovaRoutes.signup: (context) => SignupScreen(),
+      },
+      home: AnimatedSplashScreen(
+        splash: 'assets/images/logo.png',
+        splashIconSize: 350,
+        nextScreen: nextScreen ? HomeScreen() : LoginScreen(),
+        animationDuration: Duration(milliseconds: 700),
       ),
     );
   }
-
-  // isLoggedIn() async {
-  //   await Future.delayed(Duration(seconds: 1));
-  //   BlocProvider.of<AuthCubit>(context).isLoggedIn();
-  // }
 }

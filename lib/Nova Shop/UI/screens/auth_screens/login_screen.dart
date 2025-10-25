@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nova_shop/Nova%20Shop/Data/auth_firebase.dart';
 import 'package:nova_shop/nova_routes.dart';
 import 'package:nova_shop/Nova%20Shop/UI/provider/auth_cubit.dart';
 import 'package:nova_shop/Nova%20Shop/UI/provider/auth_states.dart';
