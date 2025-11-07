@@ -30,18 +30,5 @@ A clean e-commerce Flutter app showcasing categories, promo banners, flash sales
 ## 📱 Download APK
 👉 **[Download the latest APK](https://github.com/bahaaalhout/Nova-Store/releases/latest/download/app-release.apk)**
 
-> If the link 404s, it means no Release exists yet—see “How to publish an APK” below.
 
-## 🚀 Getting Started
-
-```bash
-# 1) Get packages
-flutter pub get
-
-# 2) Run the app (debug)
-flutter run
-
-# 3) Build a release APK
-flutter build apk --release
-# result: build/app/outputs/flutter-apk/app-release.apk
 
