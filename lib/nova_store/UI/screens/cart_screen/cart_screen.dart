@@ -14,7 +14,6 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double taxsPrice = 12;
     const int delivaryPrice = 35;
     TextStyle style = TextStyle(fontWeight: FontWeight.bold, fontSize: 15);
 
@@ -86,7 +85,10 @@ class CartScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text('Delivary Price', style: style),
-                            Text('35', style: style),
+                            Text(
+                              cart.isEmpty ? '0' : '$delivaryPrice',
+                              style: style,
+                            ),
                           ],
                         ),
                         SizedBox(height: 10),
@@ -95,7 +97,7 @@ class CartScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text('Products Taxs', style: style),
-                            Text('12', style: style),
+                            Text('${(cart.length * 0.1)}', style: style),
                           ],
                         ),
                         Divider(),
@@ -106,7 +108,7 @@ class CartScreen extends StatelessWidget {
                           children: [
                             Text('Total', style: style),
                             Text(
-                              '${taxsPrice + delivaryPrice + totalPrices}',
+                              '${(cart.length * 0.1) + (cart.isEmpty ? 0 : delivaryPrice) + totalPrices}',
                               style: style,
                             ),
                           ],
