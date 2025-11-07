@@ -2,10 +2,30 @@
 
 A clean e-commerce Flutter app showcasing categories, promo banners, flash sales, ratings, stock indicators, and a cart flow.
 
+## 📸 App Screenshots
+
 <p align="center">
-  <img src="assets/screenshots/home.png" width="260" />
-  <img src="assets/screenshots/category.png" width="260" />
-  <img src="assets/screenshots/list.png" width="260" />
+  <img src="assets/screenshots/1.png" width="250" />
+  <img src="assets/screenshots/2.png" width="250" />
+  <img src="assets/screenshots/3.png" width="250" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/4.png" width="250" />
+  <img src="assets/screenshots/5.png" width="250" />
+  <img src="assets/screenshots/6.png" width="250" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/7.png" width="250" />
+  <img src="assets/screenshots/8.png" width="250" />
+  <img src="assets/screenshots/9.png" width="250" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/10.png" width="250" />
+  <img src="assets/screenshots/11.png" width="250" />
+  <img src="assets/screenshots/12.png" width="250" />
 </p>
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-blue.svg)](https://flutter.dev)
