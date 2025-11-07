@@ -108,7 +108,10 @@ class CartScreen extends StatelessWidget {
                           children: [
                             Text('Total', style: style),
                             Text(
-                              '${(cart.length * 0.12) + (cart.isEmpty ? 0 : delivaryPrice) + totalPrices}',
+                              ((cart.length * 0.12) +
+                                      (cart.isEmpty ? 0 : delivaryPrice) +
+                                      totalPrices)
+                                  .toStringAsFixed(2),
                               style: style,
                             ),
                           ],
