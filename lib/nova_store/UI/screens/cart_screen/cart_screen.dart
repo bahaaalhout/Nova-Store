@@ -97,7 +97,7 @@ class CartScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text('Products Taxs', style: style),
-                            Text('${(cart.length * 0.1)}', style: style),
+                            Text('${(cart.length * 0.12)}', style: style),
                           ],
                         ),
                         Divider(),
@@ -108,7 +108,7 @@ class CartScreen extends StatelessWidget {
                           children: [
                             Text('Total', style: style),
                             Text(
-                              '${(cart.length * 0.1) + (cart.isEmpty ? 0 : delivaryPrice) + totalPrices}',
+                              '${(cart.length * 0.12) + (cart.isEmpty ? 0 : delivaryPrice) + totalPrices}',
                               style: style,
                             ),
                           ],
